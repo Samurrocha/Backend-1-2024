@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node Atividade02/index.js",
-    "test":"node Atividade02/teste02.js"
+    "dev": "node Atividade03/index03.js"
   },
   "keywords": [],
   "author": "",
