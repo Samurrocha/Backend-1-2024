@@ -9,7 +9,7 @@ exports.criarArquivo = (req, res) => {
     let nomeArquivo = req.params.nome;
 
     for (let i = 0; i < x; i++) {
-        a.push(parseInt(((Math.random() + 1) * 4999.5)))
+        a.push(parseInt((Math.random() * 9998)+1))
         
         
 }
