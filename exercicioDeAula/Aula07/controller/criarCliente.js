@@ -8,12 +8,12 @@ exports.criarCliente = (req, res) => {
     let { sexo } = req.params
     let { uf } = req.params
 
-    connection.query(`insert into tbl_clientes2 (Nome,CPF,DataNascimento,Sexo,UF) values('${nome}','${cpf}','${data}','${sexo}','${uf}')`, (err, result, field) => {
+    connection.query(`insert into tbl_clientes values('${nome}','${sexo}','${cpf}','${data}','${uf}')`, (err, result, field) => {
 
-
+        res.send(result)
 
         console.log("cliente criado")
-        res.send("cliente criado")
+        
 
 
     })

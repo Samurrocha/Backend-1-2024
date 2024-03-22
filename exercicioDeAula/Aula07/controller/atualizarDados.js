@@ -9,7 +9,7 @@ exports.atualizar = (req, res) => {
     let { dadoNovo } = req.params
 
 
-    connection.query(`update tbl_clientes2 set ${coluna} = '${dadoNovo}' where CPF = '${cpf}'`, (err, result) => {
+    connection.query(`update tbl_clientes set ${coluna} = '${dadoNovo}' where CPF = '${cpf}'`, (err, result) => {
 
         console.log("atualizou")
         res.send("atualizado com sucesso")
