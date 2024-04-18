@@ -3,7 +3,7 @@ const config = require("../configs/db")
 
 exports.createVisitas = (req, res) => {
 
-    let { nome, CPF, dataInicio, dataFim } = req.body
+    let { data, vendedor, cliente, assunto } = req.body
 
     sql.connect(config, async (err) => {
 
@@ -89,11 +89,35 @@ exports.deleteVisitas = (req, res) => {
 
 exports.listarOrdenado = (req,res)=>{
 
-    let filtro = req.query.filtrar
+    let {filtro,dataInicio,dataFim} = req.query
 
     sql.connect(config, async(err)=>{
 
             if (err) {console.log(err)}
+
+            switch (filtro) {
+                case value:'periodo'
+                    
+                    break;
+
+                    case value:''
+                    
+                    break;
+            
+
+                    case value:
+                    
+                    break;
+            
+
+                    case value:
+                    
+                    break;
+            
+            
+                default:
+                    break;
+            }
 
             sql.query(`select * from tbl_Vendedor order by ${filtro} `, (erro,result)=>{
 

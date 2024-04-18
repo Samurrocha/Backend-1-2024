@@ -3,13 +3,13 @@ const config = require("../configs/db")
 
 exports.createCliente = (req, res) => {
 
-    let { nome, CPF, dataInicio, dataFim } = req.body
+    let { nomeSocial, nomeFantasia, CNPJ, contato,telefone,email } = req.body
 
     sql.connect(config, async (err) => {
 
         if (err) { console.log("deu bosta" + err) }
 
-        sql.query(`insert into tbl_Cliente values('${nome}','${CPF}','${dataInicio}','${dataFim}')`, (erro) => {
+        sql.query(`insert into tbl_Cliente values('${nomeSocial}','${nomeFantasia}','${CNPJ}','${contato}',${telefone},'${email}')`, (erro) => {
 
 
             if (erro) { res.status(400).json({ error: erro }) }
